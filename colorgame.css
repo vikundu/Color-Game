@@ -4,6 +4,10 @@
 	padding-bottom: 30%;
 	margin:1.66%;
 	float: left;
+	border-radius: 15%;
+	transition: background 0.6s;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
 }
 
 body{
@@ -14,7 +18,7 @@ body{
 
 #container{
 	width: 600px;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 
 h1{
@@ -41,7 +45,8 @@ h1{
 }
 
 .selected{
-	background:blue;
+	color:white;
+	background: steelblue;
 }
 
 button{
@@ -53,9 +58,16 @@ button{
 	font-size:inherit;
 	color:steelblue;
 	font-weight: 700;
+	transition: all 0.3s;
+	outline:none;
 }
 
 #message{
 	display: inline-block;
 	width: 20%;
+}
+
+button:hover{
+	color:white;
+	background: steelblue;
 }
