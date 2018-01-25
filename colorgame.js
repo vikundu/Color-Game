@@ -26,6 +26,8 @@ resetButton.addEventListener("click",function(){
 		squares[i].style.backgroundColor=colors[i];
 	}
 
+	//testing the git
+
  });
 
 
