@@ -18,32 +18,25 @@ var modeButtons=document.querySelectorAll(".mode");
 
 init();
 
-function init(){
+function init()
+{
 
 	reset();
 	
 	colorDisplay.textContent=pickedColor;
 
-
-	for(var i=0;i<modeButtons.length;i++)
-	{
+	modeButtonEventListener();
 	
-		modeButtons[i].addEventListener("click",function(){
-			modeButtons[0].classList.remove("selected");
-			modeButtons[1].classList.remove("selected");
-			this.classList.add("selected");
-			if(this.textContent==="Easy")
-				numSquares=3;
-			else
-				numSquares=6;
-
-			reset();
-		});
+	squaresEventListener();
 
 
-	}
+}
 
-	for(var i=0;i<squares.length;i++){
+
+function squaresEventListener(){
+
+	for(var i=0;i<squares.length;i++)
+	{
 
 	squares[i].style.backgroundColor= colors[i];
 
@@ -63,12 +56,30 @@ function init(){
 	});
 
 	
+	}
 }
 
 
+function modeButtonEventListener(){
+	for(var i=0;i<modeButtons.length;i++)
+	{
+	
+		modeButtons[i].addEventListener("click",function(){
+			modeButtons[0].classList.remove("selected");
+			modeButtons[1].classList.remove("selected");
+			this.classList.add("selected");
+			if(this.textContent==="Easy")
+				numSquares=3;
+			else
+				numSquares=6;
+
+			reset();
+		});
+
+
+	}
+
 }
-
-
 
 
 function reset(){
